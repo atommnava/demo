@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Aplicación</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<h1>
+    <b>Bienvenido a mi aplicación</b>
+</h1>
+
+<button onclick="cargarMensaje()">Cargar Mensaje</button>
+<p id="mensaje"></p>
+
+<script>
+    async function cargarMensaje() {
+        const response = await fetch('/api/hello');
+        const text = await response.text();
+        document.getElementById('mensaje').innerText = text;
+    }
+</script>
+</body>
+</html>
