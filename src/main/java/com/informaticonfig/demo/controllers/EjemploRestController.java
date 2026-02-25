@@ -1,21 +1,25 @@
 package com.informaticonfig.demo.controllers;
 
+import java.util.HashMap;
 // Importaciones
 import java.util.Map;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+// API Rest
 @RestController
 public class EjemploRestController {
-    @GetMapping("detalles_info")
-    public String info(Map<String, Object> model)
+
+    @GetMapping("detalles_info2")
+    public Map<String, Object> detalles_info2()
     {
         System.out.println("ENTRO EL CONTROLLER");
-        model.put("titulo", "Servidor en línea");
-        model.put("servidor", "Informaticonfig");
-        model.put("ip", "127.0.0.1");
-        return "detalles_info";
+        Map<String, Object> respuesta = new HashMap<>();
+        respuesta.put("titulo", "Servidor en línea");
+        respuesta.put("servidor", "Informaticonfig");
+        respuesta.put("ip", "127.0.0.1");
+        return respuesta;
     }
 
 }
