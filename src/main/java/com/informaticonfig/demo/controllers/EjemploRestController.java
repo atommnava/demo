@@ -19,7 +19,6 @@ public class EjemploRestController {
     public Map<String, Object> detalles_info2()
     {
         Empleados empleado1 = new Empleados("Atom", "Nava", "Apple Street", "Practicante", 21, 1111, 1);
-
         System.out.println("ENTRO EL CONTROLLER");
         Map<String, Object> respuesta = new HashMap<>();
         respuesta.put("Empleado", empleado1);
