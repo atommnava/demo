@@ -3,6 +3,18 @@ package com.informaticonfig.demo.models;
 public class Empleados {
     private String nombre, apellido, direccion, puesto;
     private int edad, telefono, id;
+
+    public Empleados(String nombre, String apellido, String direccion, String puesto,
+        int edad, int telefono, int id
+    ){
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.direccion = direccion;
+        this.puesto = puesto;
+        this.edad = edad;
+        this.telefono = telefono;
+        this.id = id;
+    }
     public String getNombre() {
         return nombre;
     }
