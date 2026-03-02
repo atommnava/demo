@@ -17,7 +17,7 @@ public class EjemploController {
     public String info(Model model)
     {
         System.out.println("ENTRO EL CONTROLLER");
-        Empleados empleado1 = new Empleados("Atom", "Nava", "Apple Street", "Practicante",
+        Empleados empleado1 = new Empleados("Atom", "Nava", null, "Practicante",
          21, 1111, 1);
         model.addAttribute("Empleado", empleado1);
         return "detalles_info";
