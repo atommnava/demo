@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping("/api/parametros")
 public class RequestParamControllers {
     @GetMapping("/detalle")
-    public ParametroDTO detalle(@RequestParam String informacion){
+    public ParametroDTO detalle(@RequestParam(required = false, defaultValue = "Parámetro por defecto") String informacion){
         ParametroDTO parametro1 = new ParametroDTO();
         parametro1.setInformacion(informacion);
         return parametro1;
