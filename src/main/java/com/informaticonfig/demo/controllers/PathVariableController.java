@@ -18,7 +18,7 @@ public class PathVariableController {
         parametro1.setInformacion(mensaje);
         return parametro1;
     }
-    @PostMapping("/api/variable/solicitud")
+    @PostMapping("/solicitud")
     public Empleados creaEmpleado(@RequestBody Empleados empleado1){
         return empleado1;
     }
