@@ -4,6 +4,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import com.informaticonfig.demo.models.Empleados;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
 
 @RestController
 @RequestMapping("/api/variable")
@@ -14,4 +18,10 @@ public class PathVariableController {
         parametro1.setInformacion(mensaje);
         return parametro1;
     }
+    @PostMapping("/api/variable/solicitud")
+    public Empleados creaEmpleado(@RequestBody Empleados empleado1){
+        return empleado1;
+    }
+    
+    
 }
