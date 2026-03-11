@@ -1,5 +1,8 @@
 package com.informaticonfig.demo.controllers;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -34,6 +37,16 @@ public class PathVariableController {
     @PostMapping("/solicitud")
     public Empleados creaEmpleado(@RequestBody Empleados empleado1){
         return empleado1;
+    }
+
+    @GetMapping("/valores")
+    public Map<String, Object> values(){
+        Map<String, Object> json = new HashMap<>();
+        json.put("codigo", codigo);
+        json.put("mensaje", mensaje);
+        json.put("usuario", usuario);
+        json.put("valores", valores);
+        return json;
     }
     
     
